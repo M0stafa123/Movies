@@ -24,7 +24,7 @@ const UpComing = () => {
   }, []);
   return (
     <section className="upcoming">
-      <h1>Up Coming Movies</h1>
+      <h1>Upcoming Movies</h1>
       <div>
         {upComing &&
           upComing.map((movie) => (
