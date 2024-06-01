@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 export interface CardInfo {
   id: string;
   poster_path: string;
@@ -7,10 +6,20 @@ export interface CardInfo {
   vote_average: number;
   release_date: string;
 }
+
+declare module "react" {
+  interface ImgHTMLAttributes<T> extends HTMLAttributes<T> {
+    fetchpriority?: "high" | "low" | "auto";
+  }
+}
 const Card = ({ poster_path, title, vote_average, release_date, id }: CardInfo) => {
   return (
     <div className="card">
-      <img src={"https://image.tmdb.org/t/p/w400" + poster_path} alt={title} />
+      <img
+        fetchpriority="low"
+        src={"https://image.tmdb.org/t/p/w400" + poster_path}
+        alt={title}
+      />
       <Link to={`/movie/${id}`}>
         <h1>
           <span>name:</span> {title}

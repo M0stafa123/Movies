@@ -8,7 +8,7 @@ const Header = () => {
     <header className="relative p-4 text-white bg-header">
       <section className="flex items-center justify-between base">
         <Link to={"/"}>
-          <img className="w-[170px] h-[70px]" src="images/Logo.png" alt="Logo" />
+          <img className="w-[170px] h-[59px]" src="images/Logo.png" alt="Logo" />
         </Link>
         <div
           className={

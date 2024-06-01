@@ -7,7 +7,7 @@ const Footer = () => {
         <div>
           <h1 className="text-4xl">
             <img
-              className="w-[170px] mx-auto h-[70px]"
+              className="w-[170px] mx-auto h-[59px]"
               src="images/Logo.png"
               alt="Logo"
             />
