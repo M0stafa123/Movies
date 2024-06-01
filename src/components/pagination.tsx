@@ -24,10 +24,10 @@ const Pagination = ({ pageCount, keyWord }: { pageCount: number; keyWord: string
         marginPagesDisplayed={2}
         pageCount={pageCount}
         previousLabel="< previous"
-        pageLinkClassName="p-1 border border-header  md:min-w-[2.5rem] bg-pagination  text-header text-center rounded-md hover:bg-[#6F8AB7] hover:text-pagination inline-block text-xs md:text-xl"
+        pageLinkClassName="p-[3px] border border-header  md:min-w-[2.5rem] bg-pagination  text-header text-center rounded-md hover:bg-[#6F8AB7] hover:text-pagination inline-block text-xs md:text-xl"
         breakClassName="text-[#6A7FDB]"
-        nextLinkClassName="p-1 border  border-header bg-pagination  text-header text-center rounded-md hover:bg-[#6F8AB7] hover:text-pagination text-xs md:text-xl"
-        previousLinkClassName="p-1 border border-header bg-pagination  text-header text-center rounded-md hover:bg-[#6F8AB7] hover:text-pagination text-xs md:text-xl"
+        nextLinkClassName="p-[3px] border  border-header bg-pagination  text-header text-center rounded-md hover:bg-[#6F8AB7] hover:text-pagination text-xs md:text-xl"
+        previousLinkClassName="p-[3px] border border-header bg-pagination  text-header text-center rounded-md hover:bg-[#6F8AB7] hover:text-pagination text-xs md:text-xl"
         activeLinkClassName="!text-pagination !bg-header"
       />
     </section>

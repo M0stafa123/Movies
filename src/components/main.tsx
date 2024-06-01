@@ -23,7 +23,7 @@ const Main = () => {
     <main className="*:z-10 *:relative p-4 ">
       <UpComing />
       <Search setKeyWord={setKeyWord} setPageCount={setPageCount} />
-      <section className="w-full md:w-11/12 md:mx-auto">
+      <section className=" w-[300px] md:w-11/12 mx-auto">
         <h1 className="my-10 text-6xl text-center text-white">Popular Movies</h1>
         <div className="grid flex-wrap justify-center min-h-screen grid-cols-1 gap-4 md:flex">
           {manyMovies &&

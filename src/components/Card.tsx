@@ -8,11 +8,6 @@ export interface CardInfo {
   loading: "eager" | "lazy";
 }
 
-declare module "react" {
-  interface ImgHTMLAttributes<T> extends HTMLAttributes<T> {
-    fetchpriority?: "high" | "low" | "auto";
-  }
-}
 const Card = ({
   poster_path,
   title,
@@ -25,7 +20,6 @@ const Card = ({
     <div className="card">
       <img
         loading={loading}
-        fetchpriority="low"
         src={"https://image.tmdb.org/t/p/w400" + poster_path}
         alt={title}
       />
