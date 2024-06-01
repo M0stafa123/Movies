@@ -19,7 +19,7 @@ main::after {
   @apply absolute left-0 w-full h-full pointer-events-none bg-mainGradiant;
 }
 .card {
-  @apply relative w-[300px] min-w-[300px] h-[450px] rounded-md overflow-hidden *:cursor-pointer;
+  @apply relative md:w-[300px] min-w-[300px] h-[450px] rounded-md overflow-hidden *:cursor-pointer;
 }
 .card > a {
   @apply absolute top-0 left-0 flex flex-col items-center justify-center w-full h-full transition-all opacity-0 *:my-1

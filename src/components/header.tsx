@@ -25,7 +25,7 @@ const Header = () => {
         </div>
         <div className="block md:hidden">
           <img
-            className="w-[35px] brightness-0 invert"
+            className="w-[35px] h-[35px] brightness-0 invert"
             src={isOpen ? close : open}
             alt={isOpen ? "X-mark" : "burger"}
             onClick={() => setIsOpen(!isOpen)}

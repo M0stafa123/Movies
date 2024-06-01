@@ -25,10 +25,10 @@ const Main = () => {
       <Search setKeyWord={setKeyWord} setPageCount={setPageCount} />
       <section className="w-full md:w-11/12 md:mx-auto">
         <h1 className="my-10 text-6xl text-center text-white">Popular Movies</h1>
-        <div className="flex flex-wrap justify-center min-h-screen gap-4">
+        <div className="grid flex-wrap justify-center min-h-screen grid-cols-1 gap-4 md:flex">
           {manyMovies &&
             movies.results &&
-            movies.results.map((movie: CardInfo) => (
+            movies.results.map((movie: CardInfo, i) => (
               <Card
                 id={movie.id}
                 key={movie.id}
@@ -36,7 +36,7 @@ const Main = () => {
                 title={movie.title}
                 release_date={movie.release_date}
                 vote_average={movie.vote_average}
-                loading="lazy"
+                loading={"eager"}
               />
             ))}
           {isFetching && (

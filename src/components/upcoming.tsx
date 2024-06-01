@@ -41,10 +41,18 @@ const UpComing = () => {
       </div>
       <section className="flex justify-between px-4 my-8">
         <button onClick={(e) => navigate(e, false)}>
-          <img src="images/left-arrow.svg" alt="left-arrow" />
+          <img
+            className="w-[50px] h-[50px]"
+            src="images/left-arrow.svg"
+            alt="left-arrow"
+          />
         </button>
         <button onClick={(e) => navigate(e, true)}>
-          <img src="images/right-arrow.svg" alt="right-arrow" />
+          <img
+            className="w-[50px] h-[50px]"
+            src="images/right-arrow.svg"
+            alt="right-arrow"
+          />
         </button>
       </section>
     </section>
