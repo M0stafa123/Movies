@@ -5,6 +5,7 @@ export interface CardInfo {
   title: string;
   vote_average: number;
   release_date: string;
+  loading: "eager" | "lazy";
 }
 
 declare module "react" {
@@ -12,10 +13,18 @@ declare module "react" {
     fetchpriority?: "high" | "low" | "auto";
   }
 }
-const Card = ({ poster_path, title, vote_average, release_date, id }: CardInfo) => {
+const Card = ({
+  poster_path,
+  title,
+  vote_average,
+  release_date,
+  id,
+  loading,
+}: CardInfo) => {
   return (
     <div className="card">
       <img
+        loading={loading}
         fetchpriority="low"
         src={"https://image.tmdb.org/t/p/w400" + poster_path}
         alt={title}
