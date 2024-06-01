@@ -1,13 +1,69 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.base {
+  @apply w-11/12 mx-auto;
+}
+header ul li {
+  @apply after:w-0 after:h-0.5 relative after:absolute hover:after:w-full after:bg-white 
+  after:left-1/2 after:-translate-x-1/2 after:bottom-[-3px] after:transition-all;
+}
+header > section > div:first-of-type {
+  @apply absolute left-0 z-20 w-full p-4 transition-all bg-black md:relative md:z-auto md:w-auto md:p-0 md:bg-transparent;
+}
+main {
+  @apply relative min-h-screen bg-body bg-bodyImg after:top-0;
+}
+main::after {
+  @apply absolute left-0 w-full h-full pointer-events-none bg-mainGradiant;
+}
+.card {
+  @apply relative w-[300px] min-w-[300px] h-[450px] rounded-md overflow-hidden *:cursor-pointer;
+}
+.card > a {
+  @apply absolute top-0 left-0 flex flex-col items-center justify-center w-full h-full transition-all opacity-0 *:my-1
+   p-4 text-center text-white bg-[#000000ba];
+}
+.card > a span {
+  @apply block capitalize text-sky-200;
+}
+.card img {
+  @apply w-full h-full;
+}
+.card:hover > a {
+  @apply opacity-100;
+}
+.upcoming > h1 {
+  @apply mb-10 text-3xl text-center text-white md:text-6xl;
+}
+.upcoming > div {
+  @apply flex transition-all mx-auto overflow-hidden w-[calc(316px)] md:w-[calc(2*316px)] lg:w-[calc(3*316px)] full:w-[calc(4*316px)] *:mr-4;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.upcoming button {
+  @apply w-[50px] h-[50px] bg-white rounded-full;
+}
+.details {
+  @apply relative min-h-[calc(100vh-88px)];
+}
+.details a {
+  @apply w-[100px] py-3 bg-[#00a9ff] text-white rounded-md;
+}
+.cast > div {
+  @apply w-[200px] aspect-square text-center mx-auto md:mx-0;
+}
+footer ul img {
+  @apply aspect-square w-[20px] brightness-0 invert transition-all;
+}
+footer ul img:hover {
+  filter: brightness(0) saturate(100%) invert(63%) sepia(6%) saturate(3605%)
+    hue-rotate(358deg) brightness(84%) contrast(68%);
+}
+footer li {
+  @apply my-2;
+}
+footer li a {
+  @apply after:w-0 after:h-0.5 relative after:absolute hover:after:w-full after:bg-white 
+  after:left-1/2 after:-translate-x-1/2 after:bottom-[-30%] after:transition-all;
 }
